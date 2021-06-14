@@ -31,6 +31,39 @@ namespace SampleApp
 
             // Api Responce(JSON) >> State List >> DropDwon 
         }
-      
+
+        private void ApiTest_Load(object sender, EventArgs e)
+        {
+            List<State> states = new List<State>();
+
+            State s1 = new State();
+            s1.state_id = 1;
+            s1.state_name = "Kerala";
+
+            State s2 = new State();
+            s2.state_id = 2;
+            s2.state_name = "Jammu";
+
+            State s3 = new State();
+            s3.state_id =3;
+            s3.state_name = "Thamil Naduu";
+
+            states.Add(s1);
+            states.Add(s2);
+            states.Add(s3);
+
+
+            foreach (State item in states)
+            {
+                comboBox1.Items.Add(item.state_id + "." + item.state_name);
+            }
+
+            //for (int i = 0; i < states.Count; i++)
+            //{
+            //    comboBox1.Items.Add(states[i].state_id + "."+states[i].state_name);
+            //}
+
+
+        }
     }
 }

@@ -31,6 +31,7 @@ namespace SampleApp
         {
             this.button1 = new System.Windows.Forms.Button();
             this.txtData = new System.Windows.Forms.TextBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // button1
@@ -51,15 +52,25 @@ namespace SampleApp
             this.txtData.Size = new System.Drawing.Size(616, 184);
             this.txtData.TabIndex = 1;
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(546, 49);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 2;
+            // 
             // ApiTest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(741, 341);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.txtData);
             this.Controls.Add(this.button1);
             this.Name = "ApiTest";
             this.Text = "ApiTest";
+            this.Load += new System.EventHandler(this.ApiTest_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -69,5 +80,6 @@ namespace SampleApp
 
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox txtData;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
